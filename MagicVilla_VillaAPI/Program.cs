@@ -12,6 +12,7 @@ builder.Services.AddDbContext<MagicVillaContext>(option => {
     option.UseSqlServer(builder.Configuration.GetConnectionString("MagicVillaConnection"));
 });
 builder.Services.AddScoped<IVillaRepository, VillaRepository>();
+builder.Services.AddScoped<IVillaNumberRepository, VillaNumberRepository>();
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 builder.Services.AddControllers(option => {
     //option.ReturnHttpNotAcceptable = true;
